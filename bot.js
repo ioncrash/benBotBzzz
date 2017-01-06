@@ -18,8 +18,9 @@ const statusUpdate = function(text) {
 Twitter.stream('statuses/filter', {track: '@benBotBzzz'}, function(stream) {
   stream.on('data', function(tweet) {
     console.log("someone tweeted at me!")
-    // let username = "@" + tweet.user.screen_name;
-    // statusUpdate("@pygartheangel and he's feelin goooood");
+    let username = "@" + tweet.user.screen_name;
+    // console.log(username + " hello to you!");
+    statusUpdate(username + " hello to you!");
     // console.log("and he's feelin' goooooood " + username);
   });
 
