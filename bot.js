@@ -14,17 +14,18 @@ const statusUpdate = function(text) {
     console.log(response);  // Raw response object.
   });
 };
-// {follow: '24913944'}
-// Twitter.stream('statuses/filter', {track: '#honkeyTonkFlounder'}, function(stream) {
-//   stream.on('data', function(tweet) {
-//     let username = "@" + tweet.user.screen_name;
-//     statusUpdate("@pygartheangel and he's feelin goooood");
-//     // console.log("and he's feelin' goooooood " + username);
-//   });
-//
-//   stream.on('error', function(error) {
-//     console.log(error);
-//   });
-// });
+{follow: '24913944'}
+Twitter.stream('statuses/filter', {track: '@benBotBzzz'}, function(stream) {
+  stream.on('data', function(tweet) {
+    console.log("someone tweeted at me!")
+    // let username = "@" + tweet.user.screen_name;
+    // statusUpdate("@pygartheangel and he's feelin goooood");
+    // console.log("and he's feelin' goooooood " + username);
+  });
 
-statusUpdate('test success!');
+  stream.on('error', function(error) {
+    console.log(error);
+  });
+});
+
+// statusUpdate('test success!');
