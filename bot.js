@@ -19,13 +19,16 @@ const statusUpdate = (text) => {
 Twitter.stream('statuses/filter', {track: '@benBotBzzz'}, function(stream) {
   stream.on('data', function(tweet) {
     let spiels = readString(tweet.text);
-    
-    })
+    let username = "@" + tweet.user.screen_name + " ";
+    spiels.forEach((spiel) => {
+      statusUpdate(username + spiel);
+    });
+  });
 
 
     // let username = "@" + tweet.user.screen_name;
     // statusUpdate(username + " hello to you!");
-  });
+  // });
 
   stream.on('error', function(error) {
     console.log(error);
