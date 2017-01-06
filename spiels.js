@@ -1,6 +1,6 @@
 'use strict'
 
 module.exports = {
-  'TIC-TAC-TOE': "Tic-tac-toe was Ben's first project (don't judge him too hard!). It's a front-end app using JS, JQuery, AJAX, Bootstrap, and SASS. https://ioncrash.github.io/working-project",
-  'PILLYFISH': "Pillyfish is a full-stack app designed to keep track of your medications! Ben designed it for his gothy girlfriend, which is why it's purple on black (she also likes jellyfish);",
+  'TIC-TAC-TOE': "Tic-tac-toe was Ben's first project (don't judge him too hard!). https://goo.gl/fZSU3h",
+  'PILLYFISH': "Pillyfish is an app that keeps track of meds. It was designed for Ben's gothy gf, so it's purple. https://goo.gl/HO0Z9C",
 };
