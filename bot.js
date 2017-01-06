@@ -1,9 +1,10 @@
 'use strict';
 
-const TwitterPackage = require('twitter');
 const secret = require('./secret.js');
+const TwitterPackage = require('twitter');
+const Twitter = new TwitterPackage(secret);
 
-var Twitter = new TwitterPackage(secret);
+let readString = require('./readString.js');
 
 const statusUpdate = (text) => {
   Twitter.post('statuses/update', {status: text}, function(error, tweet, response){
@@ -14,14 +15,16 @@ const statusUpdate = (text) => {
     console.log(response);  // Raw response object.
   });
 };
-{follow: '24913944'}
+
 Twitter.stream('statuses/filter', {track: '@benBotBzzz'}, function(stream) {
   stream.on('data', function(tweet) {
-    console.log("someone tweeted at me!")
-    let username = "@" + tweet.user.screen_name;
-    // console.log(username + " hello to you!");
-    statusUpdate(username + " hello to you!");
-    // console.log("and he's feelin' goooooood " + username);
+    let spiels = readString(tweet.text);
+    
+    })
+
+
+    // let username = "@" + tweet.user.screen_name;
+    // statusUpdate(username + " hello to you!");
   });
 
   stream.on('error', function(error) {
