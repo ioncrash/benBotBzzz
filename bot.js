@@ -5,7 +5,7 @@ const secret = require('./secret.js');
 
 var Twitter = new TwitterPackage(secret);
 
-const statusUpdate = function(text) {
+const statusUpdate = (text) => {
   Twitter.post('statuses/update', {status: text}, function(error, tweet, response){
     if(error){
       console.log(error);
