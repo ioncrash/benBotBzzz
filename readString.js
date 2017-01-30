@@ -11,6 +11,9 @@ const readString = (text) => {
       hits.push(spiels[e])
     }
   })
+  if (hits.length === 0) {
+    
+  }
   return hits;
 };
 
