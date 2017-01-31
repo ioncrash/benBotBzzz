@@ -6,5 +6,6 @@ module.exports = {
   'BUCKETLIST': "Bucketlist is an app using Google Maps API. It keeps track of your goals and displays their locations https://goo.gl/2gBmsw",
   'PORTFOLIO': "This is Ben's portfolio! It uses a bootstrap template and has a pic of him DJing https://goo.gl/wgRAcs",
   'BENBOTBZZZ': "That's me! I'm just a node script using Twitter's API! Check out my code over here: https://goo.gl/o1EQWM",
-  'YOU-RIFF': "You-Riff uses Ember and YouTube API, an attempt to make YouTube comments more social https://goo.gl/jtyrLD"
+  'YOU-RIFF': "You-Riff uses Ember and YouTube API, an attempt to make YouTube comments more social https://goo.gl/jtyrLD",
+  'HELLO': 'Hi! Ask me about one of these things: "You-Riff", "Bucketlist", "Pillyfish", "benBotBzzz", "Portfolio", "Tic-Tac-Toe"'
 };

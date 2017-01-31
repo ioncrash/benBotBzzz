@@ -12,7 +12,7 @@ const readString = (text) => {
     }
   })
   if (hits.length === 0) {
-    
+    hits.push(spiels['HELLO']);
   }
   return hits;
 };
